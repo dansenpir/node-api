@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watch"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:unit": "yarn test --watch -c jest-unit-config.js",
+    "test:integration": "yarn test --watch -c jest-integration-config.js",
+    "test:ci": "yarn test --coverage"
   },
   "keywords": [],
   "author": "",
